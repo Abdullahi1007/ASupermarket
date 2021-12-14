@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+:root{
+  --dark: #000;
+  --light: #fff;
+}
+
+/* profile page */
+
+.sec_profile{
+  padding: 50px 20px;
+}
+
+.profile_heading{
+  background: #00b894;
+  border-bottom: 1px solid #79ffe4;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--light);
+}
+
+.profile_desc{
+  background: #009678;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--light);
+}
+
+.profile_table{
+  width: 50%;
+}
+
+.td_first{
+}
+
+/* media */
+@media(max-width: 992px){
+  .profile_table{
+    width: 80%;
+  }
+}
+
+@media(max-width: 550px){
+  .profile_table{
+    width: 100%;
+  }
+}

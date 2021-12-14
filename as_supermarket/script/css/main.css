@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn:focus{
+  outline: none;
+  box-shadow: transparent;
+}
+
+:root{
+  --dark: #000;
+  --light: #fff;
+}
+
+/* header */
+.logo{
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.logo:hover{
+  color: var(--dark) !important;
+}
+
+.nav_custom{
+  background: #130f40;
+  background: #00b894;
+  padding: 15px 50px;
+}
+
+.navbar_nav li a{
+  font-weight: 600;
+  color: var(--light) !important;
+  font-size: 16px;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.navbar_nav li a .cart_icon{
+  font-size: 20px;
+}
+
+.navbar_nav li a:hover{
+  color: var(--dark) !important;
+}
+
+.hero{
+  min-height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.164), rgba(0, 0, 0, 0.164)), url("../Images/hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2,
+.hero h1{
+  color: var(--light);
+  font-weight: 600;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.178);
+}
+
+.navbar_toggler{
+  border: none;
+}
+
+.navbar_toggler:focus{
+  outline: none;
+}
+
+/* fotoer */
+footer{
+  padding: 20px;
+  background: #00b894;
+}
+
+footer p{
+  color: var(--light);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* cartlist page */
+.sec_cartlist{
+  padding: 50px 50px;
+}
+
+.wrap_box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartlist_left{
+  width: 74%;
+}
+
+.cartlist_right{
+  width: 24%;
+  padding: 15px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.089);
+  height: fit-content;
+  border: 1px solid #00b89344;
+}
+
+.cartlist{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.137);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  margin-bottom: 15px;
+  border: 1px solid #00b89344;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.cartlist:hover{
+  box-shadow: 0 2px 6px #00b89334;
+}
+
+.cartlist_img{
+  width: 150px;
+  /* margin-right: 50px; */
+}
+
+.cartlist_input{
+  width: 170px;
+}
+
+.table_cart th,
+.table_cart td{
+  padding: 6px 0;
+}
+
+.input_num{
+  text-align: center;
+}
+
+.input_num:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.btn_check_out{
+  background: #00b894;
+  color: var(--light);
+}
+
+.btn_check_out:hover{
+  background: #009b7c;
+}
+
+/* media */
+@media(max-width: 1200px){
+  .sec_cartlist{
+    padding: 50px 20px;
+  }
+}
+
+@media(max-width: 850px){
+  .wrap_box{
+    flex-direction: column;
+  }
+  .wrap_box > div{
+    width: 100%;
+  }
+  .cartlist_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .cartlist_img img {
+    width: 250px;
+  }
+}
+
+@media(max-width: 550px){
+  .cartlist_img {
+    margin-bottom: 15px;
+  }
+  .cartlist_img img {
+    width: 200px;
+  }
+  .cartlist_action{
+    width: 100%;
+    margin-top: 15px;
+  }
+  .cartlist_action .btn{
+    display: block;
+  }
+}
+
+@media(max-width: 480px){
+  .nav_custom {
+    padding: 15px 30px;
+  }
+  .cartlist_name{
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .cartlist_input{
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
